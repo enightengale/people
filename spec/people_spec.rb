@@ -16,4 +16,15 @@ describe("#Person") do
     end
   end
 
+  describe("#id") do
+    it("will increment id by one each time a new person is created") do
+      john = Person.new("John", "Hopkins", "Golf", "Florida")
+      john.save()
+      mary = Person.new("Mary", "Hopkins", "Mini Golf", "Florida")
+      mary.save()
+      expect(john.id()).to(eq(2))
+      expect(mary.id()).to(eq(3))
+    end
+  end
+
 end
