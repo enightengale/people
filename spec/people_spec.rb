@@ -7,4 +7,13 @@ describe("#Person") do
       expect(Person.all()).to(eq([]))
     end
   end
+
+  describe("#save") do
+    it("will push a person into an array") do
+      john = Person.new("John", "Hopkins", "Golf", "Florida")
+      john.save()
+      expect(Person.all()).to(eq([john]))
+    end
+  end
+
 end

@@ -13,4 +13,8 @@ class Person
   def self.all()
     @@people
   end
+
+  def save()
+    @@people.push(self)
+  end
 end
