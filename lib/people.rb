@@ -38,13 +38,11 @@ class Person
 
   # loop through each person and find its id!
   def self.find(id)
-    person_id = id.to_i
+    person_id = id.to_i()
     @@people.each do |person|
-      if person.id === person.id
+      if person_id == person.id
         return person
       end
     end
   end
 end
-
-binding.pry
