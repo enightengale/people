@@ -27,4 +27,13 @@ describe("#Person") do
     end
   end
 
+  describe(".find") do
+    it("will find the correct person based in their id") do
+      Person.clear()
+      john = Person.new("John", "Hopkins", "Golf", "Florida")
+      john.save()
+      expect(Person.find(1)).to(eq(john))
+    end
+  end
+
 end

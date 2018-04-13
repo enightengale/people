@@ -1,7 +1,5 @@
-<div class="jumbotron">
-
-  <h1>Welcome People!</h1>
-  <p>Tell us about yourself by filling in the form below.</p>
+<h1>Welcome People!</h1>
+<p>Tell us about yourself by filling in the form below.</p>
 
   <form action="/" method="post">
     <div class="row">
@@ -28,7 +26,10 @@
      <button type="submit" class="btn btn-primary">create</button>
   </form>
 
-  <h4>List of people that filled out the form</h4>
+<h4>List of people that filled out the form</h4>
 
-
-</div>
+  <% @people.each do |person| %>
+  <ul>
+    <li><a href="/person/<%= person.id %>"> <%= person.firstName %> <%= person.lastName %></a></li>
+  </ul>
+  <% end %>
