@@ -1,6 +1,4 @@
-# Elijah Nightengale
-
-## People
+# People
 This is another project that uses Sinatra for basic routing. Click [ here](https://calm-headland-74841.herokuapp.com/) to fill out my form and see how it all works.
 
 ## Resources
